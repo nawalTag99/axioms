@@ -1,0 +1,165 @@
+---
+const serif = { fontFamily: "'Instrument Serif', serif" };
+const sans = { fontFamily: "'Inter', system-ui, sans-serif" };
+---
+
+<div class="relative min-h-screen overflow-hidden bg-[#f8fffd] text-slate-900" style={sans}>
+  <div
+    class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(45,212,191,0.22),_transparent_32%),radial-gradient(circle_at_80%_20%,_rgba(15,23,42,0.06),_transparent_24%),linear-gradient(180deg,_#f8fffd_0%,_#effcf8_100%)]"
+    aria-hidden="true"
+  ></div>
+  <div
+    class="pointer-events-none absolute inset-0 bg-[url('/social.png')] bg-cover bg-center opacity-[0.035] mix-blend-multiply"
+    aria-hidden="true"
+  ></div>
+  <div class="relative z-10">
+  <header class="mx-auto flex max-w-7xl items-center justify-between px-6 pt-6 sm:px-10">
+    <div class="flex items-center gap-2">
+      <div class="h-2 w-2 rounded-full bg-teal-700" aria-hidden="true"></div>
+      <span class="dm-sans text-xl tracking-tight italic text-slate-950" style={serif}>Axiom</span>
+    </div>
+    <nav class="hidden items-center gap-8 text-sm md:flex">
+      <a href="#product" class="transition-colors hover:text-teal-700">Product</a>
+      <a href="#how" class="transition-colors hover:text-teal-700">How it works</a>
+      <a href="#tracks" class="transition-colors hover:text-teal-700">Tracks</a>
+      <a href="/contact" class="transition-colors hover:text-teal-700">Contact</a>
+    </nav>
+    <a href="/decision?mode=quotations" class="rounded-full bg-teal-700 px-5 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90">
+      Start decision
+    </a>
+  </header>
+
+  <section class="mx-auto max-w-7xl px-6 pt-14 pb-10 sm:px-10 sm:pt-20">
+    <div class="mx-auto max-w-4xl text-center">
+      <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-1.5 text-xs tracking-[0.18em] uppercase text-slate-500">
+        <span class="h-1.5 w-1.5 rounded-full bg-teal-700"></span>
+        Axiom procurement analyst
+      </div>
+      <h1 class="text-5xl leading-[1.02] tracking-tight text-slate-950 sm:text-7xl md:text-8xl" style={serif}>
+        Procurement decisions
+        <br />
+        <em class="not-italic text-teal-700">you can defend.</em>
+      </h1>
+      <p class="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
+        Compare vendor quotations or explore trusted catalogue options. Axiom normalises inputs,
+        discovers decision criteria, weighs tradeoffs, and produces an explainable recommendation.
+      </p>
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+        <a href="/decision?mode=quotations" class="rounded-full bg-teal-700 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90">
+          Upload quotations
+        </a>
+        <a href="#tracks" class="rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-medium text-slate-900 transition-colors hover:bg-slate-50">
+          Use catalogue
+        </a>
+      </div>
+
+      <div class="relative mx-auto mt-14 w-full max-w-5xl overflow-hidden rounded-2xl border border-slate-200 translucent-card shadow-[0_30px_80px_-30px_rgba(15,118,110,0.15)]">
+        <video src="/axiom-hero.mp4" autoplay muted loop playsinline class="block w-full" aria-label="Axiom abstract motion identity"></video>
+        <div class="hero-blend pointer-events-none absolute inset-0 rounded-2xl" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between px-6 py-4 text-[10px] tracking-[0.3em] uppercase text-slate-500">
+          <span>Study № 01</span>
+          <span>Clarity · by design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="mx-auto max-w-7xl px-6 py-24 sm:px-10">
+    <div class="mb-14 flex items-end justify-between gap-6">
+      <h2 class="max-w-xl text-4xl tracking-tight sm:text-5xl" style={serif}>
+        A structured path from inputs to defensible output.
+      </h2>
+      <div class="hidden text-xs tracking-[0.3em] uppercase text-slate-500 md:block">How it works</div>
+    </div>
+    <div class="grid gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 md:grid-cols-3">
+    <div class="translucent-card p-8">
+        <div class="text-[10px] tracking-[0.3em] uppercase text-slate-500">Step 01</div>
+        <div class="mt-4 text-xl text-slate-950" style={serif}>Understand options</div>
+        <p class="mt-3 text-sm leading-relaxed text-slate-600">Normalise uploaded PDFs into structured vendor facts.</p>
+      </div>
+      <div class="translucent-card p-8">
+        <div class="text-[10px] tracking-[0.3em] uppercase text-slate-500">Step 02</div>
+        <div class="mt-4 text-xl text-slate-950" style={serif}>Discover priorities</div>
+        <p class="mt-3 text-sm leading-relaxed text-slate-600">Surface the decision criteria that actually matter.</p>
+      </div>
+      <div class="translucent-card p-8">
+        <div class="text-[10px] tracking-[0.3em] uppercase text-slate-500">Step 03</div>
+        <div class="mt-4 text-xl text-slate-950" style={serif}>Defend recommendation</div>
+        <p class="mt-3 text-sm leading-relaxed text-slate-600">Weighted scoring with an explainable tradeoff view.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tracks" class="mx-auto max-w-7xl px-6 pb-24 sm:px-10">
+    <div class="grid gap-6 md:grid-cols-2">
+      <a href="/decision?mode=quotations" class="group relative overflow-hidden rounded-2xl border border-slate-200 translucent-card p-8 transition-colors hover:border-teal-700/40">
+        <div class="text-[10px] tracking-[0.3em] uppercase text-slate-500">Track A</div>
+        <div class="mt-4 text-2xl text-slate-950" style={serif}>Upload vendor quotations</div>
+        <p class="mt-3 max-w-md text-sm leading-relaxed text-slate-600">
+          Normalise uploaded PDFs into structured vendor facts, then score each quote against the same criteria and tradeoffs.
+        </p>
+        <span class="mt-8 inline-flex items-center gap-2 text-sm font-medium text-teal-700">
+          Start with quotations
+          <span aria-hidden="true">→</span>
+        </span>
+      </a>
+
+      <a href="/decision?mode=catalogue" class="group relative overflow-hidden rounded-2xl border border-slate-200 translucent-card p-8 transition-colors hover:border-teal-700/40">
+        <div class="text-[10px] tracking-[0.3em] uppercase text-slate-500">Track B</div>
+        <div class="mt-4 text-2xl text-slate-950" style={serif}>Use catalogue RAG</div>
+        <p class="mt-3 max-w-md text-sm leading-relaxed text-slate-600">
+          Start without quotations. Retrieve relevant vendor context from the catalogue and run it through the same metrics pipeline.
+        </p>
+        <span class="mt-8 inline-flex items-center gap-2 text-sm font-medium text-teal-700">
+          Explore the catalogue
+          <span aria-hidden="true">→</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <footer id="contact" class="border-t border-slate-200">
+    <div class="mx-auto grid max-w-7xl gap-10 px-6 py-14 sm:px-10 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-2">
+          <div class="h-2 w-2 rounded-full bg-teal-700"></div>
+          <span class="text-lg italic text-slate-950" style={serif}>Axiom</span>
+        </div>
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-slate-600">
+          An explainable procurement analyst. Clarity, by design.
+        </p>
+      </div>
+      <div>
+        <div class="text-[10px] tracking-[0.3em] uppercase text-slate-500">Product</div>
+        <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="#how" class="hover:text-teal-700">How it works</a></li>
+              <li><a href="#tracks" class="hover:text-teal-700">Tracks</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="text-[10px] tracking-[0.3em] uppercase text-slate-500">Company</div>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="/contact" class="hover:text-teal-700">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-200">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 text-[10px] tracking-[0.3em] uppercase text-slate-500 sm:px-10">
+        <span>© MMXXVI Axiom</span>
+        <span>Clarity · by design</span>
+      </div>
+    </div>
+  </footer>
+  </div>
+    <style>
+      /* Blend the video into the page background with a soft gradient (no blur) */
+      .hero-blend{pointer-events:none;background:linear-gradient(to bottom, rgba(248,255,253,0) 20%, rgba(248,255,253,0.4) 38%, rgba(248,255,253,0.75) 62%, var(--background, #f8fffd) 100%);mix-blend-mode:normal;transition:opacity 260ms ease}
+      /* Mobile: reduce intensity and avoid heavy effects */
+      @media (max-width:640px){.hero-blend{background:linear-gradient(to bottom, rgba(248,255,253,0) 10%, rgba(248,255,253,0.6) 50%, var(--background, #f8fffd) 100%)}}
+      @media (prefers-reduced-motion:reduce){.hero-blend{transition:none}}
+      /* Translucent cards that let the graded background show through */
+      .translucent-card{background:rgba(255,255,255,0.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-color:rgba(15,118,110,0.06)}
+      @media (max-width:640px){.translucent-card{background:rgba(255,255,255,0.95);backdrop-filter:none}}
+      @media (prefers-reduced-motion:reduce){.translucent-card{transition:none}}
+    </style>
+</div>

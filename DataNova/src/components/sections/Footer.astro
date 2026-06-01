@@ -1,0 +1,77 @@
+---
+import FooterForm from '@ui/forms/FooterForm.astro';
+import ContactInfo from '@common/ContactInfo.astro';
+
+// Props for customization
+const companyName = 'Axiom';
+const companyDescription =
+  'Axiom is an explainable procurement analyst — clarity, by design.';
+
+// Contact information for the company
+const contactDetails = {
+  address: 'Seattle, WA, 98104',
+  phone: '1 (833) 328-2669',
+  email: 'info@axiom.com',
+  website: 'axiom.com',
+};
+
+// Dynamic date for copyright display
+const copyrightYear = new Date().getFullYear();
+
+// Developer or team behind the website
+const craftedBy = { name: 'gulamoff', url: 'https://www.gulamoff.dev/' };
+
+// Trademark notice
+const trademarkNotice =
+  'Microsoft&reg; and Excel&reg; are registered trademarks or trademarks of Microsoft Corporation';
+// Accept a `minimal` prop from the layout to render a compact footer on certain pages
+const { minimal = false } = Astro.props;
+---
+
+{!minimal ? (
+  <footer class="border-t border-slate-200 mt-8 bg-[linear-gradient(180deg,#f8fffd_0%,#effcf8_100%)]">
+    <div class="mx-auto grid max-w-7xl gap-10 px-6 py-14 sm:px-10 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-2">
+          <div class="h-2 w-2 rounded-full bg-teal-700"></div>
+          <span class="text-lg italic text-slate-950" style="font-family: 'Instrument Serif', serif">Axiom</span>
+        </div>
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-slate-600">{companyDescription}</p>
+      </div>
+
+      <div>
+        <div class="text-[10px] tracking-[0.3em] uppercase text-slate-500">Product</div>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="#how" class="hover:text-teal-700">How it works</a></li>
+          <li><a href="#tracks" class="hover:text-teal-700">Tracks</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="text-[10px] tracking-[0.3em] uppercase text-slate-500">Company</div>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="/contact" class="hover:text-teal-700">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-slate-200">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 text-[10px] tracking-[0.3em] uppercase text-slate-500 sm:px-10">
+        <span>© MMXXVI Axiom</span>
+        <span>Clarity · by design</span>
+      </div>
+    </div>
+  </footer>
+) : (
+  <footer class="mt-auto w-full pb-8">
+    <div class="mx-auto w-full max-w-7xl px-6 sm:px-10">
+      <div class="flex items-center justify-between py-4">
+        <div class="flex items-center gap-2">
+          <div class="h-2 w-2 rounded-full bg-teal-700" aria-hidden="true"></div>
+          <span class="italic text-slate-900" style="font-family: 'Instrument Serif', serif">Axiom</span>
+        </div>
+        <div class="text-sm text-slate-500">© {copyrightYear} Axiom</div>
+      </div>
+    </div>
+  </footer>
+)}
