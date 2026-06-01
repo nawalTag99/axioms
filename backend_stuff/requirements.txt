@@ -15,4 +15,3 @@ jsonlines
 langchain-community
 langchain-huggingface
 langchain-text-splitters
-weasyprint

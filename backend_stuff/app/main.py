@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import Response
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.routes import catalog, metrics, normalise, requirements, upload, evaluation
@@ -25,6 +26,20 @@ app.include_router(metrics.router)
 app.include_router(requirements.router)
 app.include_router(catalog.router)
 app.include_router(evaluation.router)
+
+
+@app.get("/")
+def root() -> dict[str, str]:
+    return {
+        "name": "Vendor Decision API",
+        "status": "ok",
+        "healthcheck": "/health",
+    }
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+def favicon() -> Response:
+    return Response(status_code=204)
 
 
 @app.get("/health")
